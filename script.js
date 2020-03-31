@@ -1,10 +1,6 @@
 let zoomlink = document.getElementById('zoomlink');
 let zoombg = document.getElementById('zoombg');
 let multicontrol = document.getElementById('multicontrol');
-let milti1 = document.getElementById('multi1');
-let milti2 = document.getElementById('multi2');
-let milti3 = document.getElementById('multi3');
-let milti4 = document.getElementById('multi4');
 zoomlink.addEventListener('click', (event) => {
     zoomlink.style.display = 'none';
     zoombg.style.display = 'flex';
@@ -21,4 +17,13 @@ zoombg.addEventListener('click', () => {
     multicontrol.style.animationName = 'popmulti';
     multicontrol.style.animationDuration = '1.5s';
     multicontrol.style.animationFillMode = 'forwards';
+});
+multicontrol.addEventListener('click', () => {
+    multicontrol.style.animationName = 'shrinkmulti';
+    multicontrol.style.animationDuration = '.5s';
+    multicontrol.style.animationFillMode = 'forwards';
+    zoomlink.style.display = 'block';
+    zoomlink.style.animationName = 'poplink';
+    zoomlink.style.animationDuration = '1.5s';
+    zoomlink.style.animationFillMode = 'forwards';
 });
